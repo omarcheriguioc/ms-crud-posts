@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: ./changelogs/changelog-create-table-post.yml
+      relativeToChangelogFile: true
+  - include:
+      file: ./changelogs/changelog-create-table-comment.yml
+      relativeToChangelogFile: true
+  - include:
+      file: ./changelogs/changelog-populate-db-1.yml
+      relativeToChangelogFile: true

@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: ocherigui
+      changes:
+        - createTable:
+            tableName: comment
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: post_id
+                  type: INT
+              - column:
+                  name: text
+                  type: TEXT
+        - addForeignKeyConstraint:
+            constraintName:  fk_comment_post
+            baseTableName: comment
+            baseColumnNames: post_id
+            referencedTableName: post
+            referencedColumnNames: id
+            onDelete:  CASCADE

@@ -1,0 +1,12 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/posts?currentSchema=posts
+    username: postgres
+    password: postgrespw
+  liquibase:
+    contexts: dev
+    change-log: classpath:db/master-changelog.yml
+    url: jdbc:postgresql://localhost:5432/posts?currentSchema=posts
+    user: postgres
+    password: postgrespw
+    enabled: true

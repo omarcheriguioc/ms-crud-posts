@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 9092
+
+logging:
+  level:
+    org.springframework.security.web.server: DEBUG
+    org.springframework.web.cors: DEBUG
+    org.liquibase: DEBUG
+
